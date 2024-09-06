@@ -1,0 +1,11 @@
+query GetStoryOnStoryEditButtonYourInfiniteStorybookStoryFeatureStoryEditButton(
+    $storyId: ID!
+) {
+    story(id: $storyId) {
+        ...StoryOnStoryEditButtonYourInfiniteStorybookStoryFeatureStoryEditButton
+    }
+}
+
+fragment StoryOnStoryEditButtonYourInfiniteStorybookStoryFeatureStoryEditButton on Story {
+    ...StoryOnStoryEditButtonYourInfiniteStorybookStoryUiStoryEditButton
+}

@@ -1,0 +1,6 @@
+ng-container(*ngIf='userIdParam$ | async')
+    your-infinite-storybook-user-feature-user-view-card(
+        [userId]='userIdParam$ | async'
+    )
+        span(fxFlex)
+        button(mat-button, [routerLink]='["edit"]') EDIT

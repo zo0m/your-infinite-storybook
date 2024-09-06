@@ -1,0 +1,3 @@
+fragment StoryOnStoryFormFieldLinkYourInfiniteStorybookStoryUiStoryFormFieldLink on Story {
+    id
+}

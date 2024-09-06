@@ -1,0 +1,6 @@
+ng-container
+    div(*ngFor='let user of users')
+        your-infinite-storybook-user-ui-user-table-cell(
+            [user]='user',
+            (userTableCellClick)='onUserTableClick($event)'
+        )

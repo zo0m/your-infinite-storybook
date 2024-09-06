@@ -1,0 +1,11 @@
+query GetUserOnUserFormFieldLinkYourInfiniteStorybookUserFeatureUserFormFieldLink(
+    $userId: ID!
+) {
+    user(id: $userId) {
+        ...UserOnUserFormFieldLinkYourInfiniteStorybookUserFeatureUserFormFieldLink
+    }
+}
+
+fragment UserOnUserFormFieldLinkYourInfiniteStorybookUserFeatureUserFormFieldLink on User {
+    ...UserOnUserFormFieldLinkYourInfiniteStorybookUserUiUserFormFieldLink
+}

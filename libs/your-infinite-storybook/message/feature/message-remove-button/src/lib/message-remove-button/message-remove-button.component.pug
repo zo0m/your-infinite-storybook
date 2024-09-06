@@ -1,0 +1,8 @@
+ng-container(*ngIf='{ query: query$ | async } as result')
+    your-infinite-storybook-message-ui-message-remove-button(
+        [messageId]='messageId',
+        [message]='message',
+        [placeholder]='placeholder',
+        [loading]='loading'
+    )
+        ng-content

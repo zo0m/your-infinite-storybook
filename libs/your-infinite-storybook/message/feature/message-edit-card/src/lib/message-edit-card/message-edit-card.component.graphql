@@ -1,0 +1,27 @@
+query GetMessageOnMessageEditCardYourInfiniteStorybookMessageFeatureMessageEditCard(
+    $messageId: ID!
+) {
+    message(id: $messageId) {
+        ...MessageOnMessageEditCardYourInfiniteStorybookMessageFeatureMessageEditCard
+    }
+}
+
+mutation EditMessageOnMessageEditCardYourInfiniteStorybookMessageFeatureMessageEditCard(
+    $message: UpdateMessageInput!
+) {
+    messagesUpdate(messages: [$message]) {
+        ...MessageOnMessageEditCardYourInfiniteStorybookMessageFeatureMessageEditCard
+    }
+}
+
+mutation DeleteMessageOnMessageEditCardYourInfiniteStorybookMessageFeatureMessageEditCard(
+    $messageId: ID!
+) {
+    messagesDelete(ids: [$messageId]) {
+        id
+    }
+}
+
+fragment MessageOnMessageEditCardYourInfiniteStorybookMessageFeatureMessageEditCard on Message {
+    ...MessageOnMessageEditCardYourInfiniteStorybookMessageUiMessageEditCard
+}

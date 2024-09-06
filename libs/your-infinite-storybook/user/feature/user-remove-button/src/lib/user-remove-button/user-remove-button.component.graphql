@@ -1,0 +1,11 @@
+query GetUserOnUserRemoveButtonYourInfiniteStorybookUserFeatureUserRemoveButton(
+    $userId: ID!
+) {
+    user(id: $userId) {
+        ...UserOnUserRemoveButtonYourInfiniteStorybookUserFeatureUserRemoveButton
+    }
+}
+
+fragment UserOnUserRemoveButtonYourInfiniteStorybookUserFeatureUserRemoveButton on User {
+    ...UserOnUserRemoveButtonYourInfiniteStorybookUserUiUserRemoveButton
+}

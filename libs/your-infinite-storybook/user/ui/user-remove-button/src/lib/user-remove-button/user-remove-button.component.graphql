@@ -1,0 +1,4 @@
+fragment UserOnUserRemoveButtonYourInfiniteStorybookUserUiUserRemoveButton on User {
+    id
+    name
+}

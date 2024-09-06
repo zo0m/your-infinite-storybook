@@ -1,0 +1,14 @@
+ng-container(
+    *ngIf=`{
+        searchUsersQuery: searchUsersQuery$ | async,
+        getUserQuery: getUserQuery$ | async
+    } as res`
+)
+    your-infinite-storybook-user-ui-user-form-field-search(
+        [selectedUser]='selectedUser',
+        (userSelected)='onUserSelected($event)',
+        [foundUsers]='foundUsers',
+        (userSearched)='onUserSearch($event)',
+        [loading]='loading || searchLoading',
+        [placeholder]='placeholder'
+    )

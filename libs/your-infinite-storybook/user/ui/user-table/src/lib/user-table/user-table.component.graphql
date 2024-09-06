@@ -1,0 +1,3 @@
+fragment UserOnUserTableYourInfiniteStorybookUserUiUserTable on User {
+    ...UserOnUserTableCellYourInfiniteStorybookUserUiUserTableCell
+}

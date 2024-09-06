@@ -1,0 +1,11 @@
+query GetMessagesOnMessageTableYourInfiniteStorybookMessageFeatureMessageTable(
+    $where: MessagesWhereInput
+) {
+    messages(where: $where) {
+        ...MessageOnMessageTableYourInfiniteStorybookMessageFeatureMessageTable
+    }
+}
+
+fragment MessageOnMessageTableYourInfiniteStorybookMessageFeatureMessageTable on Message {
+    ...MessageOnMessageTableYourInfiniteStorybookMessageUiMessageTable
+}

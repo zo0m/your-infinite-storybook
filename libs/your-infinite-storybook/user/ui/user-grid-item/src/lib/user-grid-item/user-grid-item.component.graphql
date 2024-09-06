@@ -1,0 +1,9 @@
+fragment UserOnUserGridItemYourInfiniteStorybookUserUiUserGridItem on User {
+    id
+    createdAt
+    updatedAt
+    name
+    email
+    role
+    bio
+}

@@ -1,0 +1,4 @@
+fragment UserOnUserFormFieldLinkYourInfiniteStorybookUserUiUserFormFieldLink on User {
+    id
+    name
+}

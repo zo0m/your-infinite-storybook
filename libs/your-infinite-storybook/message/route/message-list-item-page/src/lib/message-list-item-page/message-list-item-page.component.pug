@@ -1,0 +1,6 @@
+ng-container(*ngIf='messageIdParam$ | async')
+    your-infinite-storybook-message-feature-message-view-card(
+        [messageId]='messageIdParam$ | async'
+    )
+        span(fxFlex)
+        button(mat-button, [routerLink]='["edit"]') EDIT

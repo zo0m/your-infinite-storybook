@@ -1,0 +1,3 @@
+fragment MessageOnMessageListYourInfiniteStorybookMessageUiMessageList on Message {
+    ...MessageOnMessageListItemYourInfiniteStorybookMessageUiMessageListItem
+}

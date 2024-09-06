@@ -1,0 +1,4 @@
+fragment UserOnUserEditButtonYourInfiniteStorybookUserUiUserEditButton on User {
+    id
+    name
+}

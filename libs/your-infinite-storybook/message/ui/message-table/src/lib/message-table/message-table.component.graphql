@@ -1,0 +1,3 @@
+fragment MessageOnMessageTableYourInfiniteStorybookMessageUiMessageTable on Message {
+    ...MessageOnMessageTableCellYourInfiniteStorybookMessageUiMessageTableCell
+}

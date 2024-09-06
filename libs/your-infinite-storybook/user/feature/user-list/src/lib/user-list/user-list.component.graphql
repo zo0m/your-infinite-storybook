@@ -1,0 +1,11 @@
+query GetUsersOnUserListYourInfiniteStorybookUserFeatureUserList(
+    $where: UsersWhereInput
+) {
+    users(where: $where) {
+        ...UserOnUserListYourInfiniteStorybookUserFeatureUserList
+    }
+}
+
+fragment UserOnUserListYourInfiniteStorybookUserFeatureUserList on User {
+    ...UserOnUserListYourInfiniteStorybookUserUiUserList
+}

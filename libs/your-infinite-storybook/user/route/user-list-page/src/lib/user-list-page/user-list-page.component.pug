@@ -1,0 +1,7 @@
+.your-infinite-storybook-component(fxLayout='row')
+    div(fxFlex='20')
+        your-infinite-storybook-user-feature-user-list(
+            (userListClick)='navigate($event)'
+        )
+    div(fxFlex='80')
+        router-outlet

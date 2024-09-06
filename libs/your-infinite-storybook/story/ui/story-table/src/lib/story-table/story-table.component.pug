@@ -1,0 +1,6 @@
+ng-container
+    div(*ngFor='let story of stories')
+        your-infinite-storybook-story-ui-story-table-cell(
+            [story]='story',
+            (storyTableCellClick)='onStoryTableClick($event)'
+        )

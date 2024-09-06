@@ -1,0 +1,38 @@
+ng-container(*ngIf='message')
+    mat-card
+        mat-card-header
+            mat-card-title Message
+
+        mat-card-content
+            p(fxLayout='column')
+                mat-form-field
+                    mat-label role
+                    mat-select(
+                        disableOptionCentering,
+                        [(ngModel)]='message.role',
+                        placeholder='Role'
+                    )
+                        mat-option(
+                            *ngFor='let value of ["system", "user", "assistant"]',
+                            [value]='value'
+                        ) {{ value }}
+
+                mat-form-field
+                    mat-label Content
+                    input(
+                        matInput,
+                        placeholder='Content',
+                        [(ngModel)]='message.content'
+                    )
+
+                your-infinite-storybook-story-feature-story-form-field-select(
+                    [(storyId)]='message.storyId',
+                    placeholder='Story'
+                )
+
+        mat-card-actions
+            button(mat-button, (click)='onSave()') Save
+            span(fxFlex)
+            button(mat-button, (click)='onDelete()') Delete
+
+        ng-content

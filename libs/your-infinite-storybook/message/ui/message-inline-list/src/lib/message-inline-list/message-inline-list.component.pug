@@ -1,0 +1,11 @@
+ng-container(*ngIf='messages && messages.length')
+    mat-list
+        ng-content(select='[list-start]')
+
+        your-infinite-storybook-message-ui-message-inline-list-item(
+            *ngFor='let message of messages',
+            [message]='message',
+            (messageInlineListItemClick)='onMessageInlineListClick($event)'
+        )
+
+        ng-content(select='[list-end]')

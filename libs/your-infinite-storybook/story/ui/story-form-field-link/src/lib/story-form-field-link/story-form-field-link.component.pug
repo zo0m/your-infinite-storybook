@@ -1,0 +1,15 @@
+mat-form-field
+    mat-label {{ placeholder }}
+
+    input(
+        matInput,
+        [class.cdk-visually-hidden]='hasValue()',
+        [value]='getStoryId()',
+        readonly
+    )
+
+    a(*ngIf='hasValue()', [routerLink]='getStoryLink()') {{ getTitle() }}
+
+    div(fxLayout='row', matSuffix)
+        mat-icon(*ngIf='loading')
+            mat-spinner(diameter='24', strokeWidth='1')

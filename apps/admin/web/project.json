@@ -1,0 +1,105 @@
+{
+    "name": "admin-web",
+    "$schema": "../node_modules/nx/schemas/project-schema.json",
+    "projectType": "application",
+    "sourceRoot": "apps/admin/web/src",
+    "prefix": "your-infinite-storybook",
+    "targets": {
+        "build": {
+            "executor": "@nrwl/angular:webpack-browser",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/apps/admin/web",
+                "index": "apps/admin/web/src/index.html",
+                "main": "apps/admin/web/src/main.ts",
+                "polyfills": ["zone.js"],
+                "tsConfig": "apps/admin/web/tsconfig.app.json",
+                "inlineStyleLanguage": "scss",
+                "assets": [
+                    "apps/admin/web/src/favicon.ico",
+                    "apps/admin/web/src/assets"
+                ],
+                "styles": [
+                    "@angular/material/prebuilt-themes/indigo-pink.css",
+                    "apps/admin/web/src/styles.scss"
+                ],
+                "scripts": [],
+                "customWebpackConfig": {
+                    "path": "apps/admin/web/webpack.config.ts"
+                }
+            },
+            "configurations": {
+                "production": {
+                    "budgets": [
+                        {
+                            "type": "initial",
+                            "maximumWarning": "500kb",
+                            "maximumError": "1mb"
+                        },
+                        {
+                            "type": "anyComponentStyle",
+                            "maximumWarning": "2kb",
+                            "maximumError": "4kb"
+                        }
+                    ],
+                    "outputHashing": "all"
+                },
+                "development": {
+                    "buildOptimizer": false,
+                    "optimization": false,
+                    "vendorChunk": true,
+                    "extractLicenses": false,
+                    "sourceMap": true,
+                    "namedChunks": true
+                }
+            },
+            "defaultConfiguration": "production"
+        },
+        "serve": {
+            "executor": "@nrwl/angular:webpack-dev-server",
+            "configurations": {
+                "production": {
+                    "browserTarget": "admin-web:build:production"
+                },
+                "development": {
+                    "browserTarget": "admin-web:build:development"
+                }
+            },
+            "defaultConfiguration": "development",
+            "options": {
+                "proxyConfig": "apps/admin/web/proxy.conf.ts"
+            }
+        },
+        "extract-i18n": {
+            "executor": "@angular-devkit/build-angular:extract-i18n",
+            "options": {
+                "browserTarget": "admin-web:build"
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "outputs": ["{options.outputFile}"],
+            "options": {
+                "lintFilePatterns": [
+                    "apps/admin/web/**/*.ts",
+                    "apps/admin/web/**/*.html"
+                ]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+            "options": {
+                "jestConfig": "apps/admin/web/jest.config.ts",
+                "passWithNoTests": true
+            },
+            "configurations": {
+                "ci": {
+                    "ci": true,
+                    "codeCoverage": true
+                }
+            }
+        }
+    },
+    "tags": []
+}

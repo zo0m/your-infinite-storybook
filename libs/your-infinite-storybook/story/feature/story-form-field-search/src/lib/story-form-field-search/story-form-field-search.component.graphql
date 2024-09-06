@@ -1,0 +1,19 @@
+query GetStoryOnStoryFormFieldSearchYourInfiniteStorybookStoryFeatureStoryFormFieldSearch(
+    $storyId: ID!
+) {
+    story(id: $storyId) {
+        ...StoryOnStoryFormFieldSearchYourInfiniteStorybookStoryFeatureStoryFormFieldSearch
+    }
+}
+
+query SearchStoriesOnStoryFormFieldSearchYourInfiniteStorybookStoryFeatureStoryFormFieldSearch(
+    $search: String
+) {
+    storiesSearch(search: $search) {
+        ...StoryOnStoryFormFieldSearchYourInfiniteStorybookStoryFeatureStoryFormFieldSearch
+    }
+}
+
+fragment StoryOnStoryFormFieldSearchYourInfiniteStorybookStoryFeatureStoryFormFieldSearch on Story {
+    ...StoryOnStoryFormFieldSearchYourInfiniteStorybookStoryUiStoryFormFieldSearch
+}

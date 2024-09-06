@@ -1,0 +1,9 @@
+ng-container(*ngIf='{ query: query$ | async } as result')
+    your-infinite-storybook-story-ui-story-form-field-link(
+        [storyId]='storyId',
+        [story]='story',
+        [placeholder]='placeholder',
+        [title]='title',
+        [loading]='loading'
+    )
+        ng-content

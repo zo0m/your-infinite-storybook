@@ -1,0 +1,11 @@
+query GetUsersOnUserGridYourInfiniteStorybookUserFeatureUserGrid(
+    $where: UsersWhereInput
+) {
+    users(where: $where) {
+        ...UserOnUserGridYourInfiniteStorybookUserFeatureUserGrid
+    }
+}
+
+fragment UserOnUserGridYourInfiniteStorybookUserFeatureUserGrid on User {
+    ...UserOnUserGridYourInfiniteStorybookUserUiUserGrid
+}

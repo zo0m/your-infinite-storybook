@@ -1,0 +1,14 @@
+{
+    "singleQuote": true,
+    "trailingComma": "none",
+    "arrowParens": "always",
+    "bracketSpacing": true,
+    "importOrder": ["^@your-infinite-storybook/(.*)$", "^[./]"],
+    "importOrderSeparation": true,
+    "importOrderSortSpecifiers": true,
+    "importOrderParserPlugins": [
+        "typescript",
+        "classProperties",
+        "decorators-legacy"
+    ]
+}

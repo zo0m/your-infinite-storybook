@@ -1,0 +1,11 @@
+query GetMessageOnMessageEditButtonYourInfiniteStorybookMessageFeatureMessageEditButton(
+    $messageId: ID!
+) {
+    message(id: $messageId) {
+        ...MessageOnMessageEditButtonYourInfiniteStorybookMessageFeatureMessageEditButton
+    }
+}
+
+fragment MessageOnMessageEditButtonYourInfiniteStorybookMessageFeatureMessageEditButton on Message {
+    ...MessageOnMessageEditButtonYourInfiniteStorybookMessageUiMessageEditButton
+}

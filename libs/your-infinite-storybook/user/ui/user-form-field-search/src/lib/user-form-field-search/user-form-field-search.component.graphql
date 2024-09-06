@@ -1,0 +1,4 @@
+fragment UserOnUserFormFieldSearchYourInfiniteStorybookUserUiUserFormFieldSearch on User {
+    id
+    name
+}

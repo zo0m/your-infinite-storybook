@@ -1,0 +1,27 @@
+query GetUserOnUserEditCardYourInfiniteStorybookUserFeatureUserEditCard(
+    $userId: ID!
+) {
+    user(id: $userId) {
+        ...UserOnUserEditCardYourInfiniteStorybookUserFeatureUserEditCard
+    }
+}
+
+mutation EditUserOnUserEditCardYourInfiniteStorybookUserFeatureUserEditCard(
+    $user: UpdateUserInput!
+) {
+    usersUpdate(users: [$user]) {
+        ...UserOnUserEditCardYourInfiniteStorybookUserFeatureUserEditCard
+    }
+}
+
+mutation DeleteUserOnUserEditCardYourInfiniteStorybookUserFeatureUserEditCard(
+    $userId: ID!
+) {
+    usersDelete(ids: [$userId]) {
+        id
+    }
+}
+
+fragment UserOnUserEditCardYourInfiniteStorybookUserFeatureUserEditCard on User {
+    ...UserOnUserEditCardYourInfiniteStorybookUserUiUserEditCard
+}

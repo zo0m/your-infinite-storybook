@@ -1,0 +1,37 @@
+{
+    "name": "your-infinite-storybook-message-api-message-resolver",
+    "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "libs/your-infinite-storybook/message/api/message-resolver/src",
+    "projectType": "library",
+    "targets": {
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "outputs": ["{options.outputFile}"],
+            "options": {
+                "lintFilePatterns": [
+                    "libs/your-infinite-storybook/message/api/message-resolver/**/*.ts"
+                ]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+            "options": {
+                "jestConfig": "libs/your-infinite-storybook/message/api/message-resolver/jest.config.ts",
+                "passWithNoTests": true
+            },
+            "configurations": {
+                "ci": {
+                    "ci": true,
+                    "codeCoverage": true
+                }
+            }
+        }
+    },
+    "tags": [
+        "scope:your-infinite-storybook",
+        "entity:message",
+        "type:api",
+        "platform:backend"
+    ]
+}

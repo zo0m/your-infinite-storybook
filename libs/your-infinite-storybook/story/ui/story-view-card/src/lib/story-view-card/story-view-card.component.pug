@@ -1,0 +1,61 @@
+ng-container(*ngIf='story')
+    mat-card((click)='onStoryViewCardClick()')
+        mat-card-header
+            mat-card-title Story
+            div
+                ng-content(select='[header-button]')
+            mat-progress-bar.loader(*ngIf='loading', mode='indeterminate')
+
+        mat-card-content(style='padding-top: 16px')
+            div(fxLayout='column')
+                mat-form-field
+                    mat-label
+                    input(matInput, readonly, [(ngModel)]='story.id')
+
+                mat-form-field
+                    mat-label Title
+                    input(matInput, readonly, [(ngModel)]='story.title')
+
+                mat-form-field
+                    mat-label Description
+                    input(matInput, readonly, [(ngModel)]='story.description')
+
+                mat-form-field
+                    mat-label Lesson
+                    input(matInput, readonly, [(ngModel)]='story.lesson')
+
+                mat-form-field
+                    mat-label Setting
+                    input(matInput, readonly, [(ngModel)]='story.setting')
+
+                div(fxLayout='row', fxLayoutAlign='space-between center')
+                    mat-form-field(fxFlex)
+                        mat-label Child Name
+                        input(
+                            matInput,
+                            readonly,
+                            [(ngModel)]='story.childName'
+                        )
+
+                    mat-form-field(fxFlex)
+                        mat-label Child Age
+                        input(matInput, readonly, [(ngModel)]='story.childAge')
+
+                div(fxLayout='row', fxLayoutAlign='space-between center')
+                    mat-form-field(fxFlex)
+                        mat-label Created At
+                        input(
+                            matInput,
+                            readonly,
+                            [(ngModel)]='story.createdAt'
+                        )
+
+                    mat-form-field(fxFlex)
+                        mat-label Updated At
+                        input(
+                            matInput,
+                            readonly,
+                            [(ngModel)]='story.updatedAt'
+                        )
+
+        ng-content

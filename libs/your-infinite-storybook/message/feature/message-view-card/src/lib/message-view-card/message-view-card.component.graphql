@@ -1,0 +1,11 @@
+query GetMessageOnMessageViewCardYourInfiniteStorybookMessageFeatureMessageViewCard(
+    $messageId: ID!
+) {
+    message(id: $messageId) {
+        ...MessageOnMessageViewCardYourInfiniteStorybookMessageFeatureMessageViewCard
+    }
+}
+
+fragment MessageOnMessageViewCardYourInfiniteStorybookMessageFeatureMessageViewCard on Message {
+    ...MessageOnMessageViewCardYourInfiniteStorybookMessageUiMessageViewCard
+}

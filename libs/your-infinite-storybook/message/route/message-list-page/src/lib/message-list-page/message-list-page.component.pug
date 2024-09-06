@@ -1,0 +1,7 @@
+.your-infinite-storybook-component(fxLayout='row')
+    div(fxFlex='20')
+        your-infinite-storybook-message-feature-message-list(
+            (messageListClick)='navigate($event)'
+        )
+    div(fxFlex='80')
+        router-outlet

@@ -1,0 +1,19 @@
+query GetMessageOnMessageFormFieldSelectYourInfiniteStorybookMessageFeatureMessageFormFieldSelect(
+    $messageId: ID!
+) {
+    message(id: $messageId) {
+        ...MessageOnMessageFormFieldSelectYourInfiniteStorybookMessageFeatureMessageFormFieldSelect
+    }
+}
+
+query SearchMessagesOnMessageFormFieldSelectYourInfiniteStorybookMessageFeatureMessageFormFieldSelect(
+    $search: String
+) {
+    messagesSearch(search: $search) {
+        ...MessageOnMessageFormFieldSelectYourInfiniteStorybookMessageFeatureMessageFormFieldSelect
+    }
+}
+
+fragment MessageOnMessageFormFieldSelectYourInfiniteStorybookMessageFeatureMessageFormFieldSelect on Message {
+    ...MessageOnMessageFormFieldSelectYourInfiniteStorybookMessageUiMessageFormFieldSelect
+}

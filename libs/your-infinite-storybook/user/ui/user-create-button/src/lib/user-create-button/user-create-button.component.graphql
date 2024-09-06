@@ -1,0 +1,4 @@
+fragment UserOnUserCreateButtonYourInfiniteStorybookUserUiUserCreateButton on User {
+    id
+    name
+}

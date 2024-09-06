@@ -1,0 +1,8 @@
+ng-container(*ngIf='{ query: query$ | async } as result')
+    your-infinite-storybook-story-ui-story-link(
+        [storyId]='storyId',
+        [story]='story',
+        [title]='title',
+        [loading]='loading'
+    )
+        ng-content

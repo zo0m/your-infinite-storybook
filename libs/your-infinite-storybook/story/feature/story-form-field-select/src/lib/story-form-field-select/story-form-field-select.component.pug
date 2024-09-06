@@ -1,0 +1,14 @@
+ng-container(
+    *ngIf=`{
+        searchStoriesQuery: searchStoriesQuery$ | async,
+        getStoryQuery: getStoryQuery$ | async
+    } as res`
+)
+    your-infinite-storybook-story-ui-story-form-field-select(
+        [selectedStory]='selectedStory',
+        (storySelected)='onStorySelected($event)',
+        [foundStories]='foundStories',
+        (storySearched)='onStorySearch($event)',
+        [loading]='loading || searchLoading',
+        [placeholder]='placeholder'
+    )

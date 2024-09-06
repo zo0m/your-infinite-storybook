@@ -1,0 +1,34 @@
+mutation CreateStoryOnStoryCreateCardYourInfiniteStorybookStoryFeatureStoryCreateCard(
+    $story: CreateStoryInput!
+) {
+    storiesCreate(stories: [$story]) {
+        ...StoryOnStoryCreateCardYourInfiniteStorybookStoryFeatureStoryCreateCard
+    }
+}
+
+mutation GenerateStoryOnStoryCreateCardYourInfiniteStorybookStoryFeatureStoryCreateCard(
+    $story: CreateStoryInput!
+) {
+    storyGenerate(story: $story) {
+        ...StoryOnStoryCreateCardYourInfiniteStorybookStoryFeatureStoryCreateCard
+        messages {
+            id
+            storyId
+            role
+            content
+            story {
+                id
+            }
+        }
+    }
+}
+
+fragment StoryOnStoryCreateCardYourInfiniteStorybookStoryFeatureStoryCreateCard on Story {
+    id
+    title
+    description
+    lesson
+    setting
+    childName
+    childAge
+}

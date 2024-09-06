@@ -1,0 +1,26 @@
+mat-form-field
+    mat-label {{ placeholder }}
+    input(
+        type='text',
+        matInput,
+        [placeholder]='placeholder',
+        [formControl]='searchInputControl',
+        [matAutocomplete]='objectAutoComplete'
+    )
+
+    div(fxLayout='row', matPrefix)
+        mat-icon search
+
+    div(fxLayout='row', matSuffix)
+        mat-icon(*ngIf='loading')
+            b &nbsp;...&nbsp;
+
+        button(*ngIf='canClear()', (click)='clear()', mat-icon-button)
+            mat-icon close
+
+    mat-autocomplete(
+        #objectAutoComplete='matAutocomplete',
+        (optionSelected)='onUserSelected($event)',
+        [displayWith]='getUserName'
+    )
+        mat-option(*ngFor='let user of foundUsers', [value]='user') {{ user.name }}

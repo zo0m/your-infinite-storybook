@@ -1,0 +1,3 @@
+fragment StoryOnStoryListYourInfiniteStorybookStoryUiStoryList on Story {
+    ...StoryOnStoryListItemYourInfiniteStorybookStoryUiStoryListItem
+}

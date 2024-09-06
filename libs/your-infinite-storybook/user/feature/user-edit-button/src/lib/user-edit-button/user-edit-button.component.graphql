@@ -1,0 +1,11 @@
+query GetUserOnUserEditButtonYourInfiniteStorybookUserFeatureUserEditButton(
+    $userId: ID!
+) {
+    user(id: $userId) {
+        ...UserOnUserEditButtonYourInfiniteStorybookUserFeatureUserEditButton
+    }
+}
+
+fragment UserOnUserEditButtonYourInfiniteStorybookUserFeatureUserEditButton on User {
+    ...UserOnUserEditButtonYourInfiniteStorybookUserUiUserEditButton
+}

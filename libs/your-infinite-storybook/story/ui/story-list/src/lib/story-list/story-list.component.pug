@@ -1,0 +1,7 @@
+ng-container(*ngIf='stories && stories.length')
+    mat-list
+        your-infinite-storybook-story-ui-story-list-item(
+            *ngFor='let story of stories',
+            [story]='story',
+            (storyListItemClick)='onStoryListClick($event)'
+        )

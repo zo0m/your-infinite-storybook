@@ -1,0 +1,18 @@
+ng-container(*ngIf='[query$ | async, $newWord | async] as result')
+    ng-container(*ngIf='!loading; else loadingTemplate')
+        your-infinite-storybook-message-ui-message-inline-list(
+            [messages]='messages',
+            (messageInlineListClick)='onMessageInlineListClick($event)'
+        )
+            ng-container(*ngIf='newWords', list-start)
+                mat-form-field(fxLayout='column')
+                    mat-label Last message:
+                    textarea(
+                        matInput,
+                        readonly,
+                        cdkTextareaAutosize,
+                        cdkAutosizeMinRows='1'
+                    ) {{ newWords }}
+
+    ng-template(#loadingTemplate)
+        p loading

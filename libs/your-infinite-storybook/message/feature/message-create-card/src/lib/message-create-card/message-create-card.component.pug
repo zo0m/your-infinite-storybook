@@ -1,0 +1,9 @@
+ng-container
+    ng-container(*ngIf='!(loading$ | async); else loadingTemplate')
+        your-infinite-storybook-message-ui-message-create-card(
+            (messageSubmit)='onMessageSubmit($event)'
+        )
+            ng-content
+
+    ng-template(#loadingTemplate)
+        p loading

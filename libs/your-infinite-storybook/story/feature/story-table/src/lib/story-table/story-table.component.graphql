@@ -1,0 +1,11 @@
+query GetStoriesOnStoryTableYourInfiniteStorybookStoryFeatureStoryTable(
+    $where: StoriesWhereInput
+) {
+    stories(where: $where) {
+        ...StoryOnStoryTableYourInfiniteStorybookStoryFeatureStoryTable
+    }
+}
+
+fragment StoryOnStoryTableYourInfiniteStorybookStoryFeatureStoryTable on Story {
+    ...StoryOnStoryTableYourInfiniteStorybookStoryUiStoryTable
+}

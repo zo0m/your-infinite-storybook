@@ -1,0 +1,39 @@
+{
+    "name": "your-infinite-storybook-user-route-user-grid-item-page",
+    "$schema": "../node_modules/nx/schemas/project-schema.json",
+    "projectType": "library",
+    "sourceRoot": "libs/your-infinite-storybook/user/route/user-grid-item-page/src",
+    "prefix": "your-infinite-storybook",
+    "targets": {
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+            "options": {
+                "jestConfig": "libs/your-infinite-storybook/user/route/user-grid-item-page/jest.config.ts",
+                "passWithNoTests": true
+            },
+            "configurations": {
+                "ci": {
+                    "ci": true,
+                    "codeCoverage": true
+                }
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "outputs": ["{options.outputFile}"],
+            "options": {
+                "lintFilePatterns": [
+                    "libs/your-infinite-storybook/user/route/user-grid-item-page/**/*.ts",
+                    "libs/your-infinite-storybook/user/route/user-grid-item-page/**/*.html"
+                ]
+            }
+        }
+    },
+    "tags": [
+        "scope:your-infinite-storybook",
+        "entity:user",
+        "type:route",
+        "platform:frontend"
+    ]
+}

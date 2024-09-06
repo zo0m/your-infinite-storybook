@@ -1,0 +1,6 @@
+ng-container
+    div(*ngFor='let message of messages')
+        your-infinite-storybook-message-ui-message-grid-item(
+            [message]='message',
+            (messageGridItemClick)='onMessageGridClick($event)'
+        )

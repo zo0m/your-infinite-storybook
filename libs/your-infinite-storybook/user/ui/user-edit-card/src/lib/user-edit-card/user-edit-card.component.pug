@@ -1,0 +1,45 @@
+ng-container(*ngIf='user')
+    mat-card
+        mat-card-header
+            mat-card-title {{ user.name || '&nbsp;' }}
+            mat-card-subtitle Edit User
+
+        mat-card-content
+            p(fxLayout='column')
+                mat-form-field
+                    mat-label Name
+                    input(
+                        matInput,
+                        placeholder='Name',
+                        [(ngModel)]='user.name'
+                    )
+
+                mat-form-field
+                    mat-label Email
+                    input(
+                        matInput,
+                        placeholder='Email',
+                        [(ngModel)]='user.email'
+                    )
+                mat-form-field
+                    mat-label role
+                    mat-select(
+                        disableOptionCentering,
+                        [(ngModel)]='user.role',
+                        placeholder='Role'
+                    )
+                        mat-option(
+                            *ngFor='let value of ["Guest", "Client", "Manager", "Admin", "SuperAdmin"]',
+                            [value]='value'
+                        ) {{ value }}
+
+                mat-form-field
+                    mat-label Bio
+                    input(matInput, placeholder='Bio', [(ngModel)]='user.bio')
+
+        mat-card-actions
+            button(mat-button, (click)='onSave()') Save
+            span(fxFlex)
+            button(mat-button, (click)='onDelete()') Delete
+
+        ng-content

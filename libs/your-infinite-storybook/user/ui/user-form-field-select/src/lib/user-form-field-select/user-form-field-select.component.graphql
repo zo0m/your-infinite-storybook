@@ -1,0 +1,4 @@
+fragment UserOnUserFormFieldSelectYourInfiniteStorybookUserUiUserFormFieldSelect on User {
+    id
+    name
+}

@@ -1,0 +1,61 @@
+ng-container(*ngIf='story')
+    mat-card
+        mat-card-header
+            mat-card-title Story
+
+        mat-card-content
+            p(fxLayout='column')
+                mat-form-field
+                    mat-label Title
+                    input(
+                        matInput,
+                        placeholder='Title',
+                        [(ngModel)]='story.title'
+                    )
+
+                mat-form-field
+                    mat-label Description
+                    input(
+                        matInput,
+                        placeholder='Description',
+                        [(ngModel)]='story.description'
+                    )
+
+                mat-form-field
+                    mat-label Lesson
+                    input(
+                        matInput,
+                        placeholder='Lesson',
+                        [(ngModel)]='story.lesson'
+                    )
+
+                mat-form-field
+                    mat-label Setting
+                    input(
+                        matInput,
+                        placeholder='Setting',
+                        [(ngModel)]='story.setting'
+                    )
+
+                mat-form-field
+                    mat-label Child Name
+                    input(
+                        matInput,
+                        placeholder='Child Name',
+                        [(ngModel)]='story.childName'
+                    )
+
+                mat-form-field
+                    mat-label Child Age
+                    input(
+                        matInput,
+                        placeholder='Child Age',
+                        [(ngModel)]='story.childAge'
+                    )
+
+        mat-card-actions
+            button(mat-button, (click)='onSave()') Save
+            span(fxFlex)
+            button(mat-button, (click)='onDelete()') Delete
+
+        ng-content

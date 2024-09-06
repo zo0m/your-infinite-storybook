@@ -1,0 +1,11 @@
+query GetStoryOnStoryFormFieldLinkYourInfiniteStorybookStoryFeatureStoryFormFieldLink(
+    $storyId: ID!
+) {
+    story(id: $storyId) {
+        ...StoryOnStoryFormFieldLinkYourInfiniteStorybookStoryFeatureStoryFormFieldLink
+    }
+}
+
+fragment StoryOnStoryFormFieldLinkYourInfiniteStorybookStoryFeatureStoryFormFieldLink on Story {
+    ...StoryOnStoryFormFieldLinkYourInfiniteStorybookStoryUiStoryFormFieldLink
+}

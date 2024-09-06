@@ -1,0 +1,3 @@
+fragment StoryOnStoryFormFieldSelectYourInfiniteStorybookStoryUiStoryFormFieldSelect on Story {
+    id
+}

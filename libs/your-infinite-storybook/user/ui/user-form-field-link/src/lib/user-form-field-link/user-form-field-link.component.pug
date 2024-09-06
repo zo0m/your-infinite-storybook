@@ -1,0 +1,10 @@
+mat-form-field
+    mat-label {{ placeholder }}
+
+    input(matInput, [hidden]='hasValue()', [value]='getUserId()', readonly)
+
+    a(*ngIf='hasValue()', [routerLink]='getUserLink()') {{ getTitle() }}
+
+    div(fxLayout='row', matSuffix)
+        mat-icon(*ngIf='loading')
+            mat-spinner(diameter='24', strokeWidth='1')

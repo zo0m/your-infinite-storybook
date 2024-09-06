@@ -1,0 +1,11 @@
+query GetMessageOnMessageRemoveButtonYourInfiniteStorybookMessageFeatureMessageRemoveButton(
+    $messageId: ID!
+) {
+    message(id: $messageId) {
+        ...MessageOnMessageRemoveButtonYourInfiniteStorybookMessageFeatureMessageRemoveButton
+    }
+}
+
+fragment MessageOnMessageRemoveButtonYourInfiniteStorybookMessageFeatureMessageRemoveButton on Message {
+    ...MessageOnMessageRemoveButtonYourInfiniteStorybookMessageUiMessageRemoveButton
+}

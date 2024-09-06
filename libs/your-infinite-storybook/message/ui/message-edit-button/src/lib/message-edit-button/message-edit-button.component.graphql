@@ -1,0 +1,3 @@
+fragment MessageOnMessageEditButtonYourInfiniteStorybookMessageUiMessageEditButton on Message {
+    id
+}

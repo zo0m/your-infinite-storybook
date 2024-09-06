@@ -1,0 +1,13 @@
+ng-container(*ngIf='storyIdParam$ | async')
+    your-infinite-storybook-story-feature-story-view-card([storyId]='storyId')
+        ng-container(header-button)
+            button(mat-button, [routerLink]='["edit"]') Edit
+
+        ng-container
+            mat-card
+                mat-card-header
+                    mat-card-title Messages:
+                mat-card-content
+                    your-infinite-storybook-message-feature-message-inline-list(
+                        [where]='{ storyId: storyId }'
+                    )

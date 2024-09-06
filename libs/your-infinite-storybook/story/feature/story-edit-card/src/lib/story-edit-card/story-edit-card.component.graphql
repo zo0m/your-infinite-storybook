@@ -1,0 +1,27 @@
+query GetStoryOnStoryEditCardYourInfiniteStorybookStoryFeatureStoryEditCard(
+    $storyId: ID!
+) {
+    story(id: $storyId) {
+        ...StoryOnStoryEditCardYourInfiniteStorybookStoryFeatureStoryEditCard
+    }
+}
+
+mutation EditStoryOnStoryEditCardYourInfiniteStorybookStoryFeatureStoryEditCard(
+    $story: UpdateStoryInput!
+) {
+    storiesUpdate(stories: [$story]) {
+        ...StoryOnStoryEditCardYourInfiniteStorybookStoryFeatureStoryEditCard
+    }
+}
+
+mutation DeleteStoryOnStoryEditCardYourInfiniteStorybookStoryFeatureStoryEditCard(
+    $storyId: ID!
+) {
+    storiesDelete(ids: [$storyId]) {
+        id
+    }
+}
+
+fragment StoryOnStoryEditCardYourInfiniteStorybookStoryFeatureStoryEditCard on Story {
+    ...StoryOnStoryEditCardYourInfiniteStorybookStoryUiStoryEditCard
+}

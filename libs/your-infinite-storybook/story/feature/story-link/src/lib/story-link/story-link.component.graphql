@@ -1,0 +1,11 @@
+query GetStoryOnStoryLinkYourInfiniteStorybookStoryFeatureStoryLink(
+    $storyId: ID!
+) {
+    story(id: $storyId) {
+        ...StoryOnStoryLinkYourInfiniteStorybookStoryFeatureStoryLink
+    }
+}
+
+fragment StoryOnStoryLinkYourInfiniteStorybookStoryFeatureStoryLink on Story {
+    ...StoryOnStoryLinkYourInfiniteStorybookStoryUiStoryLink
+}

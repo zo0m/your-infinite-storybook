@@ -1,0 +1,42 @@
+ng-container(*ngIf='story')
+    mat-card
+        mat-card-header
+            mat-card-title Create Story
+
+        mat-card-content
+            p(fxLayout='column')
+                mat-form-field
+                    mat-label Title
+                    input(matInput, [(ngModel)]='story.title')
+
+                mat-form-field
+                    mat-label Description
+                    input(matInput, [(ngModel)]='story.description')
+
+                mat-form-field
+                    mat-label Lesson
+                    input(matInput, [(ngModel)]='story.lesson')
+
+                mat-form-field
+                    mat-label Setting
+                    input(matInput, [(ngModel)]='story.setting')
+
+                mat-form-field
+                    mat-label Child Name
+                    input(matInput, [(ngModel)]='story.childName')
+
+                mat-form-field
+                    mat-label Child Age
+                    input(
+                        matInput,
+                        type='number',
+                        [(ngModel)]='story.childAge'
+                    )
+
+        mat-card-actions
+            button(mat-button, (click)='onGenerate()') Generate
+            button(mat-button, (click)='onSubmit()') Create Only
+            span(fxFlex)
+            button(mat-button, (click)='onClear()') CLEAR
+
+        ng-content

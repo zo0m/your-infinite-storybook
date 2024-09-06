@@ -1,0 +1,15 @@
+mutation CreateUserOnUserCreateCardYourInfiniteStorybookUserFeatureUserCreateCard(
+    $user: CreateUserInput!
+) {
+    usersCreate(users: [$user]) {
+        ...UserOnUserCreateCardYourInfiniteStorybookUserFeatureUserCreateCard
+    }
+}
+
+fragment UserOnUserCreateCardYourInfiniteStorybookUserFeatureUserCreateCard on User {
+    id
+    name
+    email
+    role
+    bio
+}

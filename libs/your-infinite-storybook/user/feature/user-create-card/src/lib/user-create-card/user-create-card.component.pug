@@ -1,0 +1,9 @@
+ng-container
+    ng-container(*ngIf='!(loading$ | async); else loadingTemplate')
+        your-infinite-storybook-user-ui-user-create-card(
+            (userSubmit)='onUserSubmit($event)'
+        )
+            ng-content
+
+    ng-template(#loadingTemplate)
+        p loading

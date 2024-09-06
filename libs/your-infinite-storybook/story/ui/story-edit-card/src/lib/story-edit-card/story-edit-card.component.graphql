@@ -1,0 +1,9 @@
+fragment StoryOnStoryEditCardYourInfiniteStorybookStoryUiStoryEditCard on Story {
+    id
+    title
+    description
+    lesson
+    setting
+    childName
+    childAge
+}

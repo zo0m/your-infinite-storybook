@@ -1,0 +1,11 @@
+query GetStoryOnStoryViewCardYourInfiniteStorybookStoryFeatureStoryViewCard(
+    $storyId: ID!
+) {
+    story(id: $storyId) {
+        ...StoryOnStoryViewCardYourInfiniteStorybookStoryFeatureStoryViewCard
+    }
+}
+
+fragment StoryOnStoryViewCardYourInfiniteStorybookStoryFeatureStoryViewCard on Story {
+    ...StoryOnStoryViewCardYourInfiniteStorybookStoryUiStoryViewCard
+}

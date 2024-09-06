@@ -1,0 +1,6 @@
+fragment MessageOnMessageEditCardYourInfiniteStorybookMessageUiMessageEditCard on Message {
+    id
+    role
+    content
+    storyId
+}

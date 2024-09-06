@@ -1,0 +1,3 @@
+fragment MessageOnMessageRemoveButtonYourInfiniteStorybookMessageUiMessageRemoveButton on Message {
+    id
+}

@@ -1,0 +1,11 @@
+query GetMessageOnMessageFormFieldLinkYourInfiniteStorybookMessageFeatureMessageFormFieldLink(
+    $messageId: ID!
+) {
+    message(id: $messageId) {
+        ...MessageOnMessageFormFieldLinkYourInfiniteStorybookMessageFeatureMessageFormFieldLink
+    }
+}
+
+fragment MessageOnMessageFormFieldLinkYourInfiniteStorybookMessageFeatureMessageFormFieldLink on Message {
+    ...MessageOnMessageFormFieldLinkYourInfiniteStorybookMessageUiMessageFormFieldLink
+}

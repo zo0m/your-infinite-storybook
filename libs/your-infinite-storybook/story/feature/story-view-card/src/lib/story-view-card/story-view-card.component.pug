@@ -1,0 +1,8 @@
+ng-container(*ngIf='query$ | async as result')
+    your-infinite-storybook-story-ui-story-view-card(
+        [story]='story',
+        [loading]='loading'
+    )
+        ng-content(select='[header-button]', header-button)
+
+    ng-content

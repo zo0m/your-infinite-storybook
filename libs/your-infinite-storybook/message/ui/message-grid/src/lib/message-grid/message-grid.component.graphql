@@ -1,0 +1,3 @@
+fragment MessageOnMessageGridYourInfiniteStorybookMessageUiMessageGrid on Message {
+    ...MessageOnMessageGridItemYourInfiniteStorybookMessageUiMessageGridItem
+}

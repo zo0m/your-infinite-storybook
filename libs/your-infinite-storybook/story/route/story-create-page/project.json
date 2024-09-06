@@ -1,0 +1,39 @@
+{
+    "name": "your-infinite-storybook-story-route-story-create-page",
+    "$schema": "../node_modules/nx/schemas/project-schema.json",
+    "projectType": "library",
+    "sourceRoot": "libs/your-infinite-storybook/story/route/story-create-page/src",
+    "prefix": "your-infinite-storybook",
+    "targets": {
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+            "options": {
+                "jestConfig": "libs/your-infinite-storybook/story/route/story-create-page/jest.config.ts",
+                "passWithNoTests": true
+            },
+            "configurations": {
+                "ci": {
+                    "ci": true,
+                    "codeCoverage": true
+                }
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "outputs": ["{options.outputFile}"],
+            "options": {
+                "lintFilePatterns": [
+                    "libs/your-infinite-storybook/story/route/story-create-page/**/*.ts",
+                    "libs/your-infinite-storybook/story/route/story-create-page/**/*.html"
+                ]
+            }
+        }
+    },
+    "tags": [
+        "scope:your-infinite-storybook",
+        "entity:story",
+        "type:route",
+        "platform:frontend"
+    ]
+}

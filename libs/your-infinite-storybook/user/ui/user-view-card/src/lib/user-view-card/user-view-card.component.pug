@@ -1,0 +1,40 @@
+ng-container(*ngIf='user')
+    mat-card((click)='onUserViewCardClick()')
+        mat-card-header
+            mat-card-title {{ user.name }}
+            mat-card-subtitle User
+            div
+                ng-content(select='[header-button]')
+            mat-progress-bar.loader(*ngIf='loading', mode='indeterminate')
+
+        mat-card-content
+            p(fxLayout='column')
+                mat-form-field
+                    mat-label
+                    input(matInput, readonly, [(ngModel)]='user.id')
+
+                mat-form-field
+                    mat-label Created At
+                    input(matInput, readonly, [(ngModel)]='user.createdAt')
+
+                mat-form-field
+                    mat-label Updated At
+                    input(matInput, readonly, [(ngModel)]='user.updatedAt')
+
+                mat-form-field
+                    mat-label Name
+                    input(matInput, readonly, [(ngModel)]='user.name')
+
+                mat-form-field
+                    mat-label Email
+                    input(matInput, readonly, [(ngModel)]='user.email')
+
+                mat-form-field
+                    mat-label Role
+                    input(matInput, readonly, [(ngModel)]='user.role')
+
+                mat-form-field
+                    mat-label Bio
+                    input(matInput, readonly, [(ngModel)]='user.bio')
+
+        ng-content

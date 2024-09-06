@@ -1,0 +1,8 @@
+ng-container(*ngIf='{ query: query$ | async } as result')
+    your-infinite-storybook-user-ui-user-remove-button(
+        [userId]='userId',
+        [user]='user',
+        [placeholder]='placeholder',
+        [loading]='loading'
+    )
+        ng-content

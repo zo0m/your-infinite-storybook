@@ -1,0 +1,564 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "rootDir": ".",
+        "sourceMap": true,
+        "declaration": false,
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "target": "es2015",
+        "module": "esnext",
+        "lib": ["es2017", "dom"],
+        "skipLibCheck": true,
+        "skipDefaultLibCheck": true,
+        "baseUrl": ".",
+        "paths": {
+            "@your-infinite-storybook/shared/api/app-configuration": [
+                "libs/shared/api/app-configuration/src/index.ts"
+            ],
+            "@your-infinite-storybook/shared/api/base-entity-service": [
+                "libs/shared/api/base-entity-service/src/index.ts"
+            ],
+            "@your-infinite-storybook/shared/api/graphql-connection": [
+                "libs/shared/api/graphql-connection/src/index.ts"
+            ],
+            "@your-infinite-storybook/shared/api/graphql-dataloader-extend-context": [
+                "libs/shared/api/graphql-dataloader-extend-context/src/index.ts"
+            ],
+            "@your-infinite-storybook/shared/api/message-broker": [
+                "libs/shared/api/message-broker/src/index.ts"
+            ],
+            "@your-infinite-storybook/shared/api/open-ai": [
+                "libs/shared/api/open-ai/src/index.ts"
+            ],
+            "@your-infinite-storybook/shared/api/typeorm-connection": [
+                "libs/shared/api/typeorm-connection/src/index.ts"
+            ],
+            "@your-infinite-storybook/shared/ui/material": [
+                "libs/shared/ui/material/src/index.ts"
+            ],
+            "@your-infinite-storybook/shared/utils/base-dataloader": [
+                "libs/shared/utils/base-dataloader/src/index.ts"
+            ],
+            "@your-infinite-storybook/shared/utils/env-reader": [
+                "libs/shared/utils/env-reader/src/index.ts"
+            ],
+            "@your-infinite-storybook/shared/utils/graphql-client-schema": [
+                "libs/shared/utils/graphql-client-schema/src/index.ts"
+            ],
+            "@your-infinite-storybook/shared/utils/graphql-connection": [
+                "libs/shared/utils/graphql-connection/src/index.ts"
+            ],
+            "@your-infinite-storybook/shared/utils/is-defined": [
+                "libs/shared/utils/is-defined/src/index.ts"
+            ],
+            "@your-infinite-storybook/shared/utils/link-options-provider": [
+                "libs/shared/utils/link-options-provider/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/api/message-data-loader": [
+                "libs/your-infinite-storybook/message/api/message-data-loader/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/api/message-dto": [
+                "libs/your-infinite-storybook/message/api/message-dto/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/api/message-graphql": [
+                "libs/your-infinite-storybook/message/api/message-graphql/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/api/message-model": [
+                "libs/your-infinite-storybook/message/api/message-model/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/api/message-resolver": [
+                "libs/your-infinite-storybook/message/api/message-resolver/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/api/message-service": [
+                "libs/your-infinite-storybook/message/api/message-service/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/feature/message-create-button": [
+                "libs/your-infinite-storybook/message/feature/message-create-button/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/feature/message-create-card": [
+                "libs/your-infinite-storybook/message/feature/message-create-card/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/feature/message-edit-button": [
+                "libs/your-infinite-storybook/message/feature/message-edit-button/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/feature/message-edit-card": [
+                "libs/your-infinite-storybook/message/feature/message-edit-card/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/feature/message-form-field-link": [
+                "libs/your-infinite-storybook/message/feature/message-form-field-link/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/feature/message-form-field-search": [
+                "libs/your-infinite-storybook/message/feature/message-form-field-search/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/feature/message-form-field-select": [
+                "libs/your-infinite-storybook/message/feature/message-form-field-select/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/feature/message-grid": [
+                "libs/your-infinite-storybook/message/feature/message-grid/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/feature/message-inline-list": [
+                "libs/your-infinite-storybook/message/feature/message-inline-list/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/feature/message-link": [
+                "libs/your-infinite-storybook/message/feature/message-link/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/feature/message-list": [
+                "libs/your-infinite-storybook/message/feature/message-list/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/feature/message-remove-button": [
+                "libs/your-infinite-storybook/message/feature/message-remove-button/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/feature/message-table": [
+                "libs/your-infinite-storybook/message/feature/message-table/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/feature/message-view-card": [
+                "libs/your-infinite-storybook/message/feature/message-view-card/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/route/message-card-page": [
+                "libs/your-infinite-storybook/message/route/message-card-page/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/route/message-create-page": [
+                "libs/your-infinite-storybook/message/route/message-create-page/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/route/message-edit-page": [
+                "libs/your-infinite-storybook/message/route/message-edit-page/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/route/message-grid-item-page": [
+                "libs/your-infinite-storybook/message/route/message-grid-item-page/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/route/message-grid-page": [
+                "libs/your-infinite-storybook/message/route/message-grid-page/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/route/message-grid-shell": [
+                "libs/your-infinite-storybook/message/route/message-grid-shell/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/route/message-id-shell": [
+                "libs/your-infinite-storybook/message/route/message-id-shell/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/route/message-index-page": [
+                "libs/your-infinite-storybook/message/route/message-index-page/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/route/message-list-item-page": [
+                "libs/your-infinite-storybook/message/route/message-list-item-page/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/route/message-list-page": [
+                "libs/your-infinite-storybook/message/route/message-list-page/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/route/message-list-shell": [
+                "libs/your-infinite-storybook/message/route/message-list-shell/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/route/message-shell": [
+                "libs/your-infinite-storybook/message/route/message-shell/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/route/message-table-item-page": [
+                "libs/your-infinite-storybook/message/route/message-table-item-page/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/route/message-table-page": [
+                "libs/your-infinite-storybook/message/route/message-table-page/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/route/message-table-shell": [
+                "libs/your-infinite-storybook/message/route/message-table-shell/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/ui/message-create-button": [
+                "libs/your-infinite-storybook/message/ui/message-create-button/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/ui/message-create-card": [
+                "libs/your-infinite-storybook/message/ui/message-create-card/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/ui/message-edit-button": [
+                "libs/your-infinite-storybook/message/ui/message-edit-button/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/ui/message-edit-card": [
+                "libs/your-infinite-storybook/message/ui/message-edit-card/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/ui/message-form-field-link": [
+                "libs/your-infinite-storybook/message/ui/message-form-field-link/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/ui/message-form-field-search": [
+                "libs/your-infinite-storybook/message/ui/message-form-field-search/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/ui/message-form-field-select": [
+                "libs/your-infinite-storybook/message/ui/message-form-field-select/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/ui/message-grid": [
+                "libs/your-infinite-storybook/message/ui/message-grid/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/ui/message-grid-item": [
+                "libs/your-infinite-storybook/message/ui/message-grid-item/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/ui/message-inline-list": [
+                "libs/your-infinite-storybook/message/ui/message-inline-list/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/ui/message-inline-list-item": [
+                "libs/your-infinite-storybook/message/ui/message-inline-list-item/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/ui/message-link": [
+                "libs/your-infinite-storybook/message/ui/message-link/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/ui/message-list": [
+                "libs/your-infinite-storybook/message/ui/message-list/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/ui/message-list-item": [
+                "libs/your-infinite-storybook/message/ui/message-list-item/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/ui/message-loader": [
+                "libs/your-infinite-storybook/message/ui/message-loader/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/ui/message-remove-button": [
+                "libs/your-infinite-storybook/message/ui/message-remove-button/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/ui/message-table": [
+                "libs/your-infinite-storybook/message/ui/message-table/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/ui/message-table-cell": [
+                "libs/your-infinite-storybook/message/ui/message-table-cell/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/ui/message-view-card": [
+                "libs/your-infinite-storybook/message/ui/message-view-card/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/utils/message-form-field-link": [
+                "libs/your-infinite-storybook/message/utils/message-form-field-link/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/utils/message-tree-edit-state": [
+                "libs/your-infinite-storybook/message/utils/message-tree-edit-state/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/message/utils/message-tree-state": [
+                "libs/your-infinite-storybook/message/utils/message-tree-state/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/shared/utils/graphql-client-schema": [
+                "libs/your-infinite-storybook/shared/utils/graphql-client-schema/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/api/story-controller": [
+                "libs/your-infinite-storybook/story/api/story-controller/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/api/story-data-loader": [
+                "libs/your-infinite-storybook/story/api/story-data-loader/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/api/story-dto": [
+                "libs/your-infinite-storybook/story/api/story-dto/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/api/story-graphql": [
+                "libs/your-infinite-storybook/story/api/story-graphql/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/api/story-model": [
+                "libs/your-infinite-storybook/story/api/story-model/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/api/story-resolver": [
+                "libs/your-infinite-storybook/story/api/story-resolver/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/api/story-service": [
+                "libs/your-infinite-storybook/story/api/story-service/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/feature/story-create-button": [
+                "libs/your-infinite-storybook/story/feature/story-create-button/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/feature/story-create-card": [
+                "libs/your-infinite-storybook/story/feature/story-create-card/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/feature/story-edit-button": [
+                "libs/your-infinite-storybook/story/feature/story-edit-button/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/feature/story-edit-card": [
+                "libs/your-infinite-storybook/story/feature/story-edit-card/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/feature/story-form-field-link": [
+                "libs/your-infinite-storybook/story/feature/story-form-field-link/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/feature/story-form-field-search": [
+                "libs/your-infinite-storybook/story/feature/story-form-field-search/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/feature/story-form-field-select": [
+                "libs/your-infinite-storybook/story/feature/story-form-field-select/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/feature/story-grid": [
+                "libs/your-infinite-storybook/story/feature/story-grid/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/feature/story-link": [
+                "libs/your-infinite-storybook/story/feature/story-link/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/feature/story-list": [
+                "libs/your-infinite-storybook/story/feature/story-list/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/feature/story-remove-button": [
+                "libs/your-infinite-storybook/story/feature/story-remove-button/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/feature/story-table": [
+                "libs/your-infinite-storybook/story/feature/story-table/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/feature/story-view-card": [
+                "libs/your-infinite-storybook/story/feature/story-view-card/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/route/story-card-page": [
+                "libs/your-infinite-storybook/story/route/story-card-page/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/route/story-create-page": [
+                "libs/your-infinite-storybook/story/route/story-create-page/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/route/story-edit-page": [
+                "libs/your-infinite-storybook/story/route/story-edit-page/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/route/story-grid-item-page": [
+                "libs/your-infinite-storybook/story/route/story-grid-item-page/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/route/story-grid-page": [
+                "libs/your-infinite-storybook/story/route/story-grid-page/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/route/story-grid-shell": [
+                "libs/your-infinite-storybook/story/route/story-grid-shell/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/route/story-id-shell": [
+                "libs/your-infinite-storybook/story/route/story-id-shell/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/route/story-index-page": [
+                "libs/your-infinite-storybook/story/route/story-index-page/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/route/story-list-item-page": [
+                "libs/your-infinite-storybook/story/route/story-list-item-page/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/route/story-list-page": [
+                "libs/your-infinite-storybook/story/route/story-list-page/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/route/story-list-shell": [
+                "libs/your-infinite-storybook/story/route/story-list-shell/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/route/story-shell": [
+                "libs/your-infinite-storybook/story/route/story-shell/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/route/story-table-item-page": [
+                "libs/your-infinite-storybook/story/route/story-table-item-page/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/route/story-table-page": [
+                "libs/your-infinite-storybook/story/route/story-table-page/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/route/story-table-shell": [
+                "libs/your-infinite-storybook/story/route/story-table-shell/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/ui/story-create-button": [
+                "libs/your-infinite-storybook/story/ui/story-create-button/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/ui/story-create-card": [
+                "libs/your-infinite-storybook/story/ui/story-create-card/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/ui/story-edit-button": [
+                "libs/your-infinite-storybook/story/ui/story-edit-button/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/ui/story-edit-card": [
+                "libs/your-infinite-storybook/story/ui/story-edit-card/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/ui/story-form-field-link": [
+                "libs/your-infinite-storybook/story/ui/story-form-field-link/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/ui/story-form-field-search": [
+                "libs/your-infinite-storybook/story/ui/story-form-field-search/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/ui/story-form-field-select": [
+                "libs/your-infinite-storybook/story/ui/story-form-field-select/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/ui/story-grid": [
+                "libs/your-infinite-storybook/story/ui/story-grid/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/ui/story-grid-item": [
+                "libs/your-infinite-storybook/story/ui/story-grid-item/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/ui/story-link": [
+                "libs/your-infinite-storybook/story/ui/story-link/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/ui/story-list": [
+                "libs/your-infinite-storybook/story/ui/story-list/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/ui/story-list-item": [
+                "libs/your-infinite-storybook/story/ui/story-list-item/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/ui/story-loader": [
+                "libs/your-infinite-storybook/story/ui/story-loader/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/ui/story-remove-button": [
+                "libs/your-infinite-storybook/story/ui/story-remove-button/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/ui/story-table": [
+                "libs/your-infinite-storybook/story/ui/story-table/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/ui/story-table-cell": [
+                "libs/your-infinite-storybook/story/ui/story-table-cell/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/ui/story-view-card": [
+                "libs/your-infinite-storybook/story/ui/story-view-card/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/utils/story-form-field-link": [
+                "libs/your-infinite-storybook/story/utils/story-form-field-link/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/utils/story-tree-edit-state": [
+                "libs/your-infinite-storybook/story/utils/story-tree-edit-state/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/story/utils/story-tree-state": [
+                "libs/your-infinite-storybook/story/utils/story-tree-state/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/api/user-data-loader": [
+                "libs/your-infinite-storybook/user/api/user-data-loader/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/api/user-dto": [
+                "libs/your-infinite-storybook/user/api/user-dto/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/api/user-graphql": [
+                "libs/your-infinite-storybook/user/api/user-graphql/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/api/user-model": [
+                "libs/your-infinite-storybook/user/api/user-model/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/api/user-resolver": [
+                "libs/your-infinite-storybook/user/api/user-resolver/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/api/user-service": [
+                "libs/your-infinite-storybook/user/api/user-service/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/feature/user-create-button": [
+                "libs/your-infinite-storybook/user/feature/user-create-button/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/feature/user-create-card": [
+                "libs/your-infinite-storybook/user/feature/user-create-card/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/feature/user-edit-button": [
+                "libs/your-infinite-storybook/user/feature/user-edit-button/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/feature/user-edit-card": [
+                "libs/your-infinite-storybook/user/feature/user-edit-card/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/feature/user-form-field-link": [
+                "libs/your-infinite-storybook/user/feature/user-form-field-link/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/feature/user-form-field-search": [
+                "libs/your-infinite-storybook/user/feature/user-form-field-search/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/feature/user-form-field-select": [
+                "libs/your-infinite-storybook/user/feature/user-form-field-select/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/feature/user-grid": [
+                "libs/your-infinite-storybook/user/feature/user-grid/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/feature/user-link": [
+                "libs/your-infinite-storybook/user/feature/user-link/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/feature/user-list": [
+                "libs/your-infinite-storybook/user/feature/user-list/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/feature/user-remove-button": [
+                "libs/your-infinite-storybook/user/feature/user-remove-button/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/feature/user-table": [
+                "libs/your-infinite-storybook/user/feature/user-table/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/feature/user-view-card": [
+                "libs/your-infinite-storybook/user/feature/user-view-card/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/route/user-card-page": [
+                "libs/your-infinite-storybook/user/route/user-card-page/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/route/user-create-page": [
+                "libs/your-infinite-storybook/user/route/user-create-page/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/route/user-edit-page": [
+                "libs/your-infinite-storybook/user/route/user-edit-page/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/route/user-grid-item-page": [
+                "libs/your-infinite-storybook/user/route/user-grid-item-page/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/route/user-grid-page": [
+                "libs/your-infinite-storybook/user/route/user-grid-page/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/route/user-grid-shell": [
+                "libs/your-infinite-storybook/user/route/user-grid-shell/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/route/user-id-shell": [
+                "libs/your-infinite-storybook/user/route/user-id-shell/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/route/user-index-page": [
+                "libs/your-infinite-storybook/user/route/user-index-page/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/route/user-list-item-page": [
+                "libs/your-infinite-storybook/user/route/user-list-item-page/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/route/user-list-page": [
+                "libs/your-infinite-storybook/user/route/user-list-page/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/route/user-list-shell": [
+                "libs/your-infinite-storybook/user/route/user-list-shell/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/route/user-shell": [
+                "libs/your-infinite-storybook/user/route/user-shell/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/route/user-table-item-page": [
+                "libs/your-infinite-storybook/user/route/user-table-item-page/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/route/user-table-page": [
+                "libs/your-infinite-storybook/user/route/user-table-page/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/route/user-table-shell": [
+                "libs/your-infinite-storybook/user/route/user-table-shell/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/ui/user-create-button": [
+                "libs/your-infinite-storybook/user/ui/user-create-button/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/ui/user-create-card": [
+                "libs/your-infinite-storybook/user/ui/user-create-card/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/ui/user-edit-button": [
+                "libs/your-infinite-storybook/user/ui/user-edit-button/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/ui/user-edit-card": [
+                "libs/your-infinite-storybook/user/ui/user-edit-card/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/ui/user-form-field-link": [
+                "libs/your-infinite-storybook/user/ui/user-form-field-link/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/ui/user-form-field-search": [
+                "libs/your-infinite-storybook/user/ui/user-form-field-search/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/ui/user-form-field-select": [
+                "libs/your-infinite-storybook/user/ui/user-form-field-select/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/ui/user-grid": [
+                "libs/your-infinite-storybook/user/ui/user-grid/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/ui/user-grid-item": [
+                "libs/your-infinite-storybook/user/ui/user-grid-item/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/ui/user-link": [
+                "libs/your-infinite-storybook/user/ui/user-link/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/ui/user-list": [
+                "libs/your-infinite-storybook/user/ui/user-list/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/ui/user-list-item": [
+                "libs/your-infinite-storybook/user/ui/user-list-item/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/ui/user-loader": [
+                "libs/your-infinite-storybook/user/ui/user-loader/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/ui/user-remove-button": [
+                "libs/your-infinite-storybook/user/ui/user-remove-button/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/ui/user-table": [
+                "libs/your-infinite-storybook/user/ui/user-table/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/ui/user-table-cell": [
+                "libs/your-infinite-storybook/user/ui/user-table-cell/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/ui/user-view-card": [
+                "libs/your-infinite-storybook/user/ui/user-view-card/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/utils/user-form-field-link": [
+                "libs/your-infinite-storybook/user/utils/user-form-field-link/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/utils/user-tree-edit-state": [
+                "libs/your-infinite-storybook/user/utils/user-tree-edit-state/src/index.ts"
+            ],
+            "@your-infinite-storybook/your-infinite-storybook/user/utils/user-tree-state": [
+                "libs/your-infinite-storybook/user/utils/user-tree-state/src/index.ts"
+            ]
+        }
+    },
+    "exclude": ["node_modules", "tmp"]
+}

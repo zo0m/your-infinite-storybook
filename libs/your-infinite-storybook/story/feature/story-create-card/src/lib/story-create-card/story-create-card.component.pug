@@ -1,0 +1,10 @@
+ng-container
+    ng-container(*ngIf='!(loading$ | async); else loadingTemplate')
+        your-infinite-storybook-story-ui-story-create-card(
+            (storySubmit)='onStorySubmit($event)',
+            (storyGenerate)='onStoryGenerate($event)'
+        )
+            ng-content
+
+    ng-template(#loadingTemplate)
+        p loading

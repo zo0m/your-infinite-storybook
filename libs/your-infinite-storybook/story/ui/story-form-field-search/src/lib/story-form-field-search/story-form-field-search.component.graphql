@@ -1,0 +1,3 @@
+fragment StoryOnStoryFormFieldSearchYourInfiniteStorybookStoryUiStoryFormFieldSearch on Story {
+    id
+}

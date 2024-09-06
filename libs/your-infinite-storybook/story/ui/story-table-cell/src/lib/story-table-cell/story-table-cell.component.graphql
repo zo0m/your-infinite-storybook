@@ -1,0 +1,11 @@
+fragment StoryOnStoryTableCellYourInfiniteStorybookStoryUiStoryTableCell on Story {
+    id
+    createdAt
+    updatedAt
+    title
+    description
+    lesson
+    setting
+    childName
+    childAge
+}

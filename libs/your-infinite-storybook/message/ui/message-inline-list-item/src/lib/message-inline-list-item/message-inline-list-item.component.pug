@@ -1,0 +1,29 @@
+ng-container(*ngIf='message')
+    div(fxLayout='column', (click)='onMessageInlineListItemClick()')
+        div(fxLayout='row', fxLayoutAlign='space-between center')
+            mat-form-field(fxFlex, appearance='fill')
+                mat-label Role
+                input(matInput, readonly, [(ngModel)]='message.role')
+
+            mat-form-field(fxFlex, appearance='fill')
+                mat-label id
+                input(matInput, readonly, [(ngModel)]='message.id')
+
+            mat-form-field(fxFlex, appearance='fill')
+                mat-label createdAt
+                input(
+                    matInput,
+                    readonly,
+                    [(ngModel)]='message.createdAt',
+                    [ngModel]='message.createdAt | date : "short"'
+                )
+
+        mat-form-field
+            mat-label Content
+            textarea(
+                matInput,
+                readonly,
+                [(ngModel)]='message.content',
+                cdkTextareaAutosize,
+                cdkAutosizeMinRows='1'
+            )

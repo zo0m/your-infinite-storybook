@@ -1,0 +1,13 @@
+.your-infinite-storybook-component
+    div(fxLayout='row')
+        div(fxFlex='20')
+            mat-toolbar
+                button(mat-button, routerLink='/stories/list/create')
+                    mat-icon add
+                    span New story
+            your-infinite-storybook-story-feature-story-list(
+                (storyListClick)='navigate($event)'
+            )
+
+        div(fxFlex='80')
+            router-outlet

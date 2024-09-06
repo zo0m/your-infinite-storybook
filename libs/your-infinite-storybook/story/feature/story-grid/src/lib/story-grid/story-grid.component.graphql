@@ -1,0 +1,11 @@
+query GetStoriesOnStoryGridYourInfiniteStorybookStoryFeatureStoryGrid(
+    $where: StoriesWhereInput
+) {
+    stories(where: $where) {
+        ...StoryOnStoryGridYourInfiniteStorybookStoryFeatureStoryGrid
+    }
+}
+
+fragment StoryOnStoryGridYourInfiniteStorybookStoryFeatureStoryGrid on Story {
+    ...StoryOnStoryGridYourInfiniteStorybookStoryUiStoryGrid
+}

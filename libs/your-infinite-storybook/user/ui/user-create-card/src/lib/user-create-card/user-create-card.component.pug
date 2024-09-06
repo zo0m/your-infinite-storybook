@@ -1,0 +1,30 @@
+ng-container(*ngIf='user')
+    mat-card
+        mat-card-header
+            mat-card-title {{ user.name || '&nbsp;' }}
+            mat-card-subtitle Create User
+
+        mat-card-content
+            p(fxLayout='column')
+                mat-form-field
+                    mat-label Name
+                    input(matInput, [(ngModel)]='user.name')
+
+                mat-form-field
+                    mat-label Email
+                    input(matInput, [(ngModel)]='user.email')
+
+                mat-form-field
+                    mat-label Role
+                    input(matInput, [(ngModel)]='user.role')
+
+                mat-form-field
+                    mat-label Bio
+                    input(matInput, [(ngModel)]='user.bio')
+
+        mat-card-actions
+            button(mat-button, (click)='onSubmit()') SUBMIT
+            span(fxFlex)
+            button(mat-button, (click)='onClear()') CLEAR
+
+        ng-content

@@ -1,0 +1,19 @@
+query GetUserOnUserFormFieldSelectYourInfiniteStorybookUserFeatureUserFormFieldSelect(
+    $userId: ID!
+) {
+    user(id: $userId) {
+        ...UserOnUserFormFieldSelectYourInfiniteStorybookUserFeatureUserFormFieldSelect
+    }
+}
+
+query SearchUsersOnUserFormFieldSelectYourInfiniteStorybookUserFeatureUserFormFieldSelect(
+    $search: String
+) {
+    usersSearch(search: $search) {
+        ...UserOnUserFormFieldSelectYourInfiniteStorybookUserFeatureUserFormFieldSelect
+    }
+}
+
+fragment UserOnUserFormFieldSelectYourInfiniteStorybookUserFeatureUserFormFieldSelect on User {
+    ...UserOnUserFormFieldSelectYourInfiniteStorybookUserUiUserFormFieldSelect
+}

@@ -1,0 +1,27 @@
+{
+    "name": "link-options-provider",
+    "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+    "projectType": "library",
+    "sourceRoot": "libs/shared/utils/link-options-provider/src",
+    "prefix": "edges-demo",
+    "targets": {
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/libs/shared/utils/link-options-provider"],
+            "options": {
+                "jestConfig": "libs/shared/utils/link-options-provider/jest.config.ts",
+                "passWithNoTests": true
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": [
+                    "libs/shared/utils/link-options-provider/**/*.ts",
+                    "libs/shared/utils/link-options-provider/**/*.html"
+                ]
+            }
+        }
+    },
+    "tags": []
+}

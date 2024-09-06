@@ -1,0 +1,53 @@
+ng-container(*ngIf='message')
+    mat-card((click)='onMessageViewCardClick()')
+        mat-card-header
+            mat-card-title Message
+            div
+                ng-content(select='[header-button]')
+            mat-progress-bar.loader(*ngIf='loading', mode='indeterminate')
+
+        mat-card-content
+            div(fxLayout='column')
+                div(fxLayout='row', fxLayoutAlign='space-between center')
+                    mat-form-field(fxFlex)
+                        mat-label
+                        input(matInput, readonly, [(ngModel)]='message.id')
+
+                    mat-form-field
+                        mat-label Role
+                        input(matInput, readonly, [(ngModel)]='message.role')
+
+                    your-infinite-storybook-story-feature-story-form-field-link(
+                        [storyId]='message.storyId',
+                        title='Story'
+                    )
+
+                mat-form-field.content
+                    mat-label Content
+                    textarea(
+                        matInput,
+                        readonly,
+                        [(ngModel)]='message.content',
+                        cdkTextareaAutosize,
+                        cdkAutosizeMinRows='1',
+                        cdkAutosizeMaxRows='30'
+                    )
+
+                div(fxLayout='row', fxLayoutAlign='space-between center')
+                    mat-form-field(fxFlex)
+                        mat-label Created At
+                        input(
+                            matInput,
+                            readonly,
+                            [(ngModel)]='message.createdAt'
+                        )
+
+                    mat-form-field(fxFlex)
+                        mat-label Updated At
+                        input(
+                            matInput,
+                            readonly,
+                            [(ngModel)]='message.updatedAt'
+                        )
+
+            ng-content

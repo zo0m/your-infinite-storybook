@@ -1,0 +1,7 @@
+ng-container(*ngIf='messages && messages.length')
+    mat-list
+        your-infinite-storybook-message-ui-message-list-item(
+            *ngFor='let message of messages',
+            [message]='message',
+            (messageListItemClick)='onMessageListClick($event)'
+        )

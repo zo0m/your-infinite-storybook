@@ -1,0 +1,4 @@
+fragment UserOnUserLinkYourInfiniteStorybookUserUiUserLink on User {
+    id
+    name
+}

@@ -1,0 +1,12 @@
+fragment MessageOnMessageInlineListItemYourInfiniteStorybookMessageUiMessageInlineListItem on Message {
+    id
+    createdAt
+    updatedAt
+    role
+    content
+    storyId
+    story {
+        id
+        title
+    }
+}

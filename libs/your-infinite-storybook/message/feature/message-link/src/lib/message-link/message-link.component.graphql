@@ -1,0 +1,11 @@
+query GetMessageOnMessageLinkYourInfiniteStorybookMessageFeatureMessageLink(
+    $messageId: ID!
+) {
+    message(id: $messageId) {
+        ...MessageOnMessageLinkYourInfiniteStorybookMessageFeatureMessageLink
+    }
+}
+
+fragment MessageOnMessageLinkYourInfiniteStorybookMessageFeatureMessageLink on Message {
+    ...MessageOnMessageLinkYourInfiniteStorybookMessageUiMessageLink
+}

@@ -1,0 +1,20 @@
+query GetMessagesOnMessageInlineListYourInfiniteStorybookMessageFeatureMessageInlineList(
+    $where: MessagesWhereInput
+) {
+    messages(where: $where) {
+        ...MessageOnMessageInlineListYourInfiniteStorybookMessageFeatureMessageInlineList
+    }
+}
+
+subscription SubscribeOnNewMessagesOnMessageInlineListYourInfiniteStorybookMessageFeatureMessageInlineList(
+    $storyId: String!
+) {
+    newStoryMessageWord(storyId: $storyId) {
+        storyId
+        word
+    }
+}
+
+fragment MessageOnMessageInlineListYourInfiniteStorybookMessageFeatureMessageInlineList on Message {
+    ...MessageOnMessageInlineListYourInfiniteStorybookMessageUiMessageInlineList
+}

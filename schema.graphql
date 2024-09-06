@@ -1,0 +1,163 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+    query: Query
+    mutation: Mutation
+    subscription: Subscription
+}
+
+type Message {
+    content: String
+    createdAt: DateTime!
+    id: ID
+    role: String
+    story: Story!
+    storyId: ID
+    updatedAt: DateTime!
+}
+
+type Mutation {
+    messagesCreate(messages: [CreateMessageInput!]!): [Message!]!
+    messagesDelete(ids: [ID!]!): [Message!]!
+    messagesUpdate(messages: [UpdateMessageInput!]!): [Message!]!
+    storiesCreate(stories: [CreateStoryInput!]!): [Story!]!
+    storiesDelete(ids: [ID!]!): [Story!]!
+    storiesUpdate(stories: [UpdateStoryInput!]!): [Story!]!
+    storyGenerate(story: CreateStoryInput!): Story!
+    usersCreate(users: [CreateUserInput!]!): [User!]!
+    usersDelete(ids: [ID!]!): [User!]!
+    usersUpdate(users: [UpdateUserInput!]!): [User!]!
+}
+
+type Query {
+    message(id: ID!): Message
+    messages(id: ID, ids: [ID!], skip: Int = 0, take: Int = 50, where: MessagesWhereInput): [Message!]!
+    messagesSearch(search: String, skip: Int = 0, take: Int = 50): [Message!]!
+    stories(id: ID, ids: [ID!], skip: Int = 0, take: Int = 50, where: StoriesWhereInput): [Story!]!
+    storiesSearch(search: String, skip: Int = 0, take: Int = 50): [Story!]!
+    story(id: ID!): Story
+    user(id: ID!): User
+    users(id: ID, ids: [ID!], skip: Int = 0, take: Int = 50, where: UsersWhereInput): [User!]!
+    usersSearch(search: String, skip: Int = 0, take: Int = 50): [User!]!
+}
+
+type Story {
+    childAge: Float
+    childName: String
+    createdAt: DateTime!
+    description: String
+    id: ID
+    lesson: String
+    messages: [Message!]!
+    setting: String
+    title: String
+    updatedAt: DateTime!
+}
+
+type StoryMessageWord {
+    storyId: String
+    word: String
+}
+
+type Subscription {
+    messagesCreated: [Message!]!
+    messagesDeleted: [Message!]!
+    messagesUpdated: [Message!]!
+    newStoryMessageWord(storyId: String!): StoryMessageWord
+    storiesCreated: [Story!]!
+    storiesDeleted: [Story!]!
+    storiesUpdated: [Story!]!
+    usersCreated: [User!]!
+    usersDeleted: [User!]!
+    usersUpdated: [User!]!
+}
+
+type User {
+    bio: String
+    createdAt: DateTime!
+    email: String
+    id: ID
+    name: String
+    role: String
+    updatedAt: DateTime!
+}
+
+"A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format."
+scalar DateTime
+
+input CreateMessageInput {
+    content: String
+    role: String
+    storyId: ID
+}
+
+input CreateStoryInput {
+    childAge: Float
+    childName: String
+    description: String
+    lesson: String
+    setting: String
+    title: String
+}
+
+input CreateUserInput {
+    bio: String
+    email: String
+    name: String
+    role: String
+}
+
+input MessagesWhereInput {
+    content: String
+    createdAt: DateTime
+    ids: [ID!]
+    role: String
+    storyId: ID
+    updatedAt: DateTime
+}
+
+input StoriesWhereInput {
+    childAge: Float
+    childName: String
+    createdAt: DateTime
+    description: String
+    ids: [ID!]
+    lesson: String
+    setting: String
+    title: String
+    updatedAt: DateTime
+}
+
+input UpdateMessageInput {
+    content: String
+    id: ID!
+    role: String
+    storyId: ID
+}
+
+input UpdateStoryInput {
+    childAge: Float
+    childName: String
+    description: String
+    id: ID!
+    lesson: String
+    setting: String
+    title: String
+}
+
+input UpdateUserInput {
+    bio: String
+    email: String
+    id: ID!
+    name: String
+    role: String
+}
+
+input UsersWhereInput {
+    createdAt: DateTime
+    email: String
+    ids: [ID!]
+    name: String
+    role: String
+    updatedAt: DateTime
+}

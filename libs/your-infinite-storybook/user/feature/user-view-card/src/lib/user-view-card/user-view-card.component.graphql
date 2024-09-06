@@ -1,0 +1,11 @@
+query GetUserOnUserViewCardYourInfiniteStorybookUserFeatureUserViewCard(
+    $userId: ID!
+) {
+    user(id: $userId) {
+        ...UserOnUserViewCardYourInfiniteStorybookUserFeatureUserViewCard
+    }
+}
+
+fragment UserOnUserViewCardYourInfiniteStorybookUserFeatureUserViewCard on User {
+    ...UserOnUserViewCardYourInfiniteStorybookUserUiUserViewCard
+}

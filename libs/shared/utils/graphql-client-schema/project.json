@@ -1,0 +1,36 @@
+{
+    "name": "graphql-client-schema",
+    "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "libs/shared/utils/graphql-client-schema/src",
+    "projectType": "library",
+    "targets": {
+        "build": {
+            "executor": "@nrwl/js:tsc",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/libs/shared/utils/graphql-client-schema",
+                "main": "libs/shared/utils/graphql-client-schema/src/index.ts",
+                "tsConfig": "libs/shared/utils/graphql-client-schema/tsconfig.lib.json",
+                "assets": ["libs/shared/utils/graphql-client-schema/*.md"]
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "outputs": ["{options.outputFile}"],
+            "options": {
+                "lintFilePatterns": [
+                    "libs/shared/utils/graphql-client-schema/**/*.ts"
+                ]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/libs/shared/utils/graphql-client-schema"],
+            "options": {
+                "jestConfig": "libs/shared/utils/graphql-client-schema/jest.config.ts",
+                "passWithNoTests": true
+            }
+        }
+    },
+    "tags": ["shared", "utils", "angular"]
+}

@@ -1,0 +1,12 @@
+ng-container(*ngIf='query$ | async as result')
+    ng-container(*ngIf='!(loading$ | async); else loadingTemplate')
+        ng-container(*ngIf='user')
+            your-infinite-storybook-user-ui-user-edit-card(
+                [user]='user',
+                (userEditCardSave)='onUserEditCardSave($event)',
+                (userEditCardDelete)='onUserEditCardDelete($event)'
+            )
+                ng-content
+
+    ng-template(#loadingTemplate)
+        p loading

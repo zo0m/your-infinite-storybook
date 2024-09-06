@@ -1,0 +1,7 @@
+ng-container(*ngIf='users && users.length')
+    mat-list
+        your-infinite-storybook-user-ui-user-list-item(
+            *ngFor='let user of users',
+            [user]='user',
+            (userListItemClick)='onUserListClick($event)'
+        )

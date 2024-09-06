@@ -1,0 +1,8 @@
+fragment MessageOnMessageTableCellYourInfiniteStorybookMessageUiMessageTableCell on Message {
+    id
+    createdAt
+    updatedAt
+    role
+    content
+    storyId
+}

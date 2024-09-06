@@ -1,0 +1,9 @@
+query GetUserOnUserLinkYourInfiniteStorybookUserFeatureUserLink($userId: ID!) {
+    user(id: $userId) {
+        ...UserOnUserLinkYourInfiniteStorybookUserFeatureUserLink
+    }
+}
+
+fragment UserOnUserLinkYourInfiniteStorybookUserFeatureUserLink on User {
+    ...UserOnUserLinkYourInfiniteStorybookUserUiUserLink
+}

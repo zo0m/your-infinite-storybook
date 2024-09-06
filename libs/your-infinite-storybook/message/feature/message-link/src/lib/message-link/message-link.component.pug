@@ -1,0 +1,8 @@
+ng-container(*ngIf='{ query: query$ | async } as result')
+    your-infinite-storybook-message-ui-message-link(
+        [messageId]='messageId',
+        [message]='message',
+        [title]='title',
+        [loading]='loading'
+    )
+        ng-content

@@ -1,0 +1,7 @@
+fragment UserOnUserEditCardYourInfiniteStorybookUserUiUserEditCard on User {
+    id
+    name
+    email
+    role
+    bio
+}

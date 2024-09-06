@@ -1,0 +1,26 @@
+mat-form-field
+    mat-label {{ placeholder }}
+    input(
+        type='text',
+        matInput,
+        [placeholder]='placeholder',
+        [formControl]='searchInputControl',
+        [matAutocomplete]='objectAutoComplete'
+    )
+
+    div(fxLayout='row', matPrefix)
+        mat-icon search
+
+    div(fxLayout='row', matSuffix)
+        mat-icon(*ngIf='loading')
+            b &nbsp;...&nbsp;
+
+        button(*ngIf='canClear()', (click)='clear()', mat-icon-button)
+            mat-icon close
+
+    mat-autocomplete(
+        #objectAutoComplete='matAutocomplete',
+        (optionSelected)='onStorySelected($event)',
+        [displayWith]='getStoryName'
+    )
+        mat-option(*ngFor='let story of foundStories', [value]='story') {{ story.id }}

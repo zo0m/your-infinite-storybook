@@ -1,0 +1,14 @@
+mutation CreateMessageOnMessageCreateCardYourInfiniteStorybookMessageFeatureMessageCreateCard(
+    $message: CreateMessageInput!
+) {
+    messagesCreate(messages: [$message]) {
+        ...MessageOnMessageCreateCardYourInfiniteStorybookMessageFeatureMessageCreateCard
+    }
+}
+
+fragment MessageOnMessageCreateCardYourInfiniteStorybookMessageFeatureMessageCreateCard on Message {
+    id
+    role
+    content
+    storyId
+}
